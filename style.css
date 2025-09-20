@@ -114,3 +114,47 @@ header ul li .logo{
     border-radius: 5px;
     padding: 10px;
 }
+
+.model-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #41317ae2;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.model{
+    position: relative;
+    width: 60vw;
+    height: 40vh;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+
+.model-info{
+    position: relative;
+    top: 15%;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.Close{
+    position: absolute;
+    right: 5%;
+    font-size: 3.5rem;
+    cursor: pointer;
+}
+
+.model-container.show{
+    display: flex;
+}
+.model-container.hide{
+    display: none;
+}

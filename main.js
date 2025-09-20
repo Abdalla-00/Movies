@@ -8,7 +8,7 @@ const buildthedom = (results)=>{
     results.forEach( movie => {
         movieContainer.innerHTML += ` <div class="movie">
              <input type="hidden">
-            <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="">
+            <img class="movie-Image" src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="">
 
             <div class="info">
                 <span class="movie-title">${movie.title}</span>
@@ -42,8 +42,23 @@ MOST_POPULAR_MOVIE();
 
 
 
+// event 
 
 
+let Close = document.querySelector(".Close");
+let modalConatiner = document.querySelector(".model-container");
+
+
+
+movieContainer.addEventListener("click", (e) => {
+  if (e.target.classList[0] == "movie-Image") {
+    modalConatiner.classList = "model-container show";
+  }
+});
+
+Close.addEventListener("click",()=>{
+  modalConatiner.classList="model-container hide"
+})
 
 
 
